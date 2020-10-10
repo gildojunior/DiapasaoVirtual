@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Diapasão Virtual</string>
+    <string name="violao">Violão</string>
+    <string name="re">D</string>
+    <string name="sol">G</string>
+    <string name="si">B</string>
+    <string name="mizinha">E</string>
+    <string name="la">A</string>
+    <string name="mizao">E</string>
+    <string name="btn_text">Afinação Escala Padrão</string>
+    <string name="title">Diapasão Virtual</string>
 </resources>
