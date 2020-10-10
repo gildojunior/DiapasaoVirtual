@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,17 +41,17 @@ public class MainActivity extends AppCompatActivity {
         btnD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mediaPlayer == null){
-                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.rezao);
-                    mediaPlayer.start();
-                    return;
-                }
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.rezao);
+                mediaPlayer.start();
+                return;
+            }
 
-                if (mediaPlayer.isPlaying()){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                }
+            if (mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
+            }
             }
         });
     }
@@ -62,17 +61,17 @@ public class MainActivity extends AppCompatActivity {
         btnB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mediaPlayer == null){
-                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.si);
-                    mediaPlayer.start();
-                    return;
-                }
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.si);
+                mediaPlayer.start();
+                return;
+            }
 
-                if (mediaPlayer.isPlaying()){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                }
+            if (mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
+            }
             }
         });
     }
@@ -82,17 +81,17 @@ public class MainActivity extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mediaPlayer == null){
-                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.lazao);
-                    mediaPlayer.start();
-                    return;
-                }
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.lazao);
+                mediaPlayer.start();
+                return;
+            }
 
-                if (mediaPlayer.isPlaying()){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                }
+            if (mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
+            }
             }
         });
     }
@@ -102,17 +101,17 @@ public class MainActivity extends AppCompatActivity {
         btnE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mediaPlayer == null){
-                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.mizao);
-                    mediaPlayer.start();
-                    return;
-                }
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.mizao);
+                mediaPlayer.start();
+                return;
+            }
 
-                if (mediaPlayer.isPlaying()){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                }
+            if (mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
+            }
             }
         });
     }
@@ -122,17 +121,17 @@ public class MainActivity extends AppCompatActivity {
         btnG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mediaPlayer == null){
-                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.sol);
-                    mediaPlayer.start();
-                    return;
-                }
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.sol);
+                mediaPlayer.start();
+                return;
+            }
 
-                if (mediaPlayer.isPlaying()){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                }
+            if (mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
+            }
             }
         });
     }
@@ -142,17 +141,17 @@ public class MainActivity extends AppCompatActivity {
         btnEm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mediaPlayer == null){
-                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.mizinha);
-                    mediaPlayer.start();
-                    return;
-                }
+            if (mediaPlayer == null){
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.mizinha);
+                mediaPlayer.start();
+                return;
+            }
 
-                if (mediaPlayer.isPlaying()){
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                }
+            if (mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+                mediaPlayer.release();
+                mediaPlayer = null;
+            }
             }
         });
     }
