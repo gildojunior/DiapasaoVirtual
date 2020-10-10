@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         btnE = (Button) findViewById(R.id.buttonE);
         btnG = (Button) findViewById(R.id.buttonG);
         btnEm = (Button) findViewById(R.id.buttonEm);
-//        btnAfinacao = (Button) findViewById(R.id.btn_afinacao);
 
         tocarCordaD();
         tocarCordaB();
