@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 public class Apresentacao extends AppCompatActivity {
 
@@ -11,8 +12,11 @@ public class Apresentacao extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apresentacao);
-        Thread welcomeThread = new Thread() {
 
+        // Remover a status bar do app
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        Thread welcomeThread = new Thread() {
             // Método responsável por mostrar a
             // tela de apresentação por 3 segundos
             @Override
