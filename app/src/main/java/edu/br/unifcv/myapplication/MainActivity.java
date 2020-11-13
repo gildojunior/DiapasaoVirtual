@@ -1,12 +1,15 @@
 package edu.br.unifcv.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -154,5 +157,34 @@ public class MainActivity extends AppCompatActivity {
             }
             }
         });
+    }
+
+    // achei isso para criar uma caixa de alerta, mas não consegui fazer
+    //atributo da classe.
+    private AlertDialog alerta;
+
+    private void exemplo_simples() {
+        //Cria o gerador do AlertDialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //define o titulo
+        builder.setTitle("Titulo");
+        //define a mensagem
+        builder.setMessage("Qualifique este software");
+        //define um botão como positivo
+        builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(MainActivity.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
+            }
+        });
+        //define um botão como negativo.
+        builder.setNegativeButton("Negativo", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                Toast.makeText(MainActivity.this, "negativo=" + arg1, Toast.LENGTH_SHORT).show();
+            }
+        });
+        //cria o AlertDialog
+        alerta = builder.create();
+        //Exibe
+        alerta.show();
     }
 }
