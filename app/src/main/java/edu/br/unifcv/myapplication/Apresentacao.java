@@ -4,35 +4,50 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.WindowManager;
 
-public class Apresentacao extends AppCompatActivity {
+public class Apresentacao extends AppCompatActivity implements Runnable {
+
+    Thread thread;
+    Handler handler;
+    int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apresentacao);
 
-        // Remover a status bar do app
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        Thread welcomeThread = new Thread() {
-            // Método responsável por mostrar a
-            // tela de apresentação por 3 segundos
-            @Override
-            public void run() {
-                try {
-                    super.run();
-                    sleep(3000 );
-                } catch (Exception e) {
+        handler = new Handler();
+        thread = new Thread(this);
+        thread.start();
 
-                } finally {
-                    Intent intent = new Intent(Apresentacao.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
+    }
+
+    @Override
+    public void run() {
+
+        i = 1;
+
+        try {
+
+            while (i < 100) {
+
+                Thread.sleep(15);
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        i++;
+                    }
+                });
             }
-        };
-        welcomeThread.start();
+
+        } catch (Exception e) {
+        }
+
+        startActivity(new Intent(this, MainActivity.class));
+
     }
 }
+

@@ -21,8 +21,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Remover a status bar do app
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+
+    // Mensagem Toast
+    public void abrirToast(View view){
+
+        Toast.makeText(
+                getApplicationContext(),
+                "Função não disponível",
+                Toast.LENGTH_LONG
+
+
+        ).show();
+
 
         btnD = (Button) findViewById(R.id.buttonD);
         btnB = (Button) findViewById(R.id.buttonB);
@@ -159,32 +170,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // achei isso para criar uma caixa de alerta, mas não consegui fazer
-    //atributo da classe.
-    private AlertDialog alerta;
-
-    private void exemplo_simples() {
-        //Cria o gerador do AlertDialog
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //define o titulo
-        builder.setTitle("Titulo");
-        //define a mensagem
-        builder.setMessage("Qualifique este software");
-        //define um botão como positivo
-        builder.setPositiveButton("Positivo", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                Toast.makeText(MainActivity.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
-            }
-        });
-        //define um botão como negativo.
-        builder.setNegativeButton("Negativo", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                Toast.makeText(MainActivity.this, "negativo=" + arg1, Toast.LENGTH_SHORT).show();
-            }
-        });
-        //cria o AlertDialog
-        alerta = builder.create();
-        //Exibe
-        alerta.show();
-    }
 }
